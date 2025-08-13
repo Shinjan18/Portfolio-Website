@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Shinjan Verma | Portfolio</title>
+
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800;900&family=Rajdhani:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+	<link rel="stylesheet" href="style.css" />
+	<script defer src="script.js"></script>
+	<meta name="description" content="Portfolio of Shinjan Verma - Frontend Developer | React JS Enthusiast" />
+</head>
+<body>
+	<header class="site-header">
+		<nav class="nav">
+			<a href="#hero" class="logo" aria-label="Go to top">SV</a>
+			<div class="nav-controls">
+				<button id="bg-music-toggle" class="bg-music-toggle" aria-label="Toggle background music" aria-pressed="false">
+					<span class="icon-music"></span>
+				</button>
+				<button id="audio-toggle" class="audio-toggle" aria-label="Toggle ambient audio" aria-pressed="false">
+					<span class="icon-sound"></span>
+				</button>
+			</div>
+			<button class="burger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-menu">
+				<span></span><span></span><span></span>
+			</button>
+			<ul id="nav-menu" class="nav-links">
+				<li><a href="#about">About</a></li>
+				<li><a href="#skills">Skills</a></li>
+				<li><a href="#projects">Projects</a></li>
+				<li><a href="#timeline">Timeline</a></li>
+				<li><a href="#certifications">Certifications</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<!-- Background Music -->
+	<audio id="bg-music" preload="auto" loop>
+		<source src="bg-music.mp3" type="audio/mpeg">
+	</audio>
+
+	<!-- Global HUD overlays -->
+	<div class="hud-overlay scanlines" aria-hidden="true"></div>
+	<div class="hud-overlay gridlines" aria-hidden="true"></div>
+
+	<section id="hero" class="hero">
+		<canvas id="hero-canvas" aria-hidden="true"></canvas>
+		<div class="radar" aria-hidden="true">
+			<div class="radar-inner"></div>
+		</div>
+		<div class="hud-icons" aria-hidden="true">
+			<div class="hex h1"></div>
+			<div class="hex h2"></div>
+			<div class="reticle r1"></div>
+			<div class="reticle r2"></div>
+		</div>
+		<div class="hero-content">
+			<h1 class="glow-xl">Shinjan Verma</h1>
+			<p class="subtitle">Frontend Developer | React JS Enthusiast</p>
+			<a class="btn-primary pulse" href="#projects">View My Work</a>
+		</div>
+	</section>
+
+	<main>
+		<section id="about" class="section">
+			<div class="container">
+				<h2 class="section-title">About Me</h2>
+				<div class="card glow reveal">
+					<p>
+						I am a Frontend Developer passionate about crafting responsive and visually appealing websites.
+						I hold an Integrated M.Tech in CSE (AI & ML) from VIT Bhopal with a CGPA of 8.23, and I specialize in HTML, CSS, JavaScript, and React JS.
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<section id="skills" class="section">
+			<div class="container">
+				<h2 class="section-title">Skills</h2>
+				<h3 class="section-subtitle">Technical Skills</h3>
+				<div class="grid skills-grid">
+					<div class="skill-card glow-small reveal"><span class="label">HTML</span><div class="progress"><span style="--p:95"></span></div></div>
+					<div class="skill-card glow-small reveal"><span class="label">CSS</span><div class="progress"><span style="--p:90"></span></div></div>
+					<div class="skill-card glow-small reveal"><span class="label">JavaScript</span><div class="progress"><span style="--p:85"></span></div></div>
+					<div class="skill-card glow-small reveal"><span class="label">React JS</span><div class="progress"><span style="--p:80"></span></div></div>
+				</div>
+
+				<h3 class="section-subtitle tools">Developer Tools</h3>
+				<div class="grid skills-grid">
+					<div class="skill-card glow-small reveal"><span class="label">Visual Studio Code</span><div class="progress"><span style="--p:90"></span></div></div>
+					<div class="skill-card glow-small reveal"><span class="label">PyCharm</span><div class="progress"><span style="--p:80"></span></div></div>
+					<div class="skill-card glow-small reveal"><span class="label">IntelliJ IDEA</span><div class="progress"><span style="--p:75"></span></div></div>
+					<div class="skill-card glow-small reveal"><span class="label">Jupyter Notebook</span><div class="progress"><span style="--p:85"></span></div></div>
+					<div class="skill-card glow-small reveal"><span class="label">Google Colab</span><div class="progress"><span style="--p:80"></span></div></div>
+				</div>
+			</div>
+		</section>
+
+		<section id="projects" class="section">
+			<div class="container">
+				<h2 class="section-title">Projects</h2>
+				<div class="grid projects-grid">
+					<article class="project-card reveal">
+						<div class="thumb thumb-food"></div>
+						<div class="project-content">
+							<h3>Food Delivery Website (Frontend)</h3>
+							<p class="stack">HTML, CSS, JavaScript</p>
+							<p class="desc">Developed a modern food delivery homepage with responsive hero section, animations, and interactive UI.</p>
+							<div class="actions">
+								<a class="btn ghost" target="_blank" rel="noreferrer" href="https://github.com/Shinjan18/Food-Delivery-Website-Frontend">GitHub</a>
+								<a class="btn primary" target="_blank" rel="noreferrer" href="https://shinjan18.github.io/Food-Delivery-Website-Frontend/">Live Demo</a>
+							</div>
+						</div>
+					</article>
+
+					<article class="project-card reveal">
+						<div class="thumb thumb-weather"></div>
+						<div class="project-content">
+							<h3>Weather Web App</h3>
+							<p class="stack">HTML, CSS, JavaScript, OpenWeatherMap API</p>
+							<p class="desc">Responsive weather app fetching real-time data with dynamic icons, temperature, humidity, and wind details.</p>
+							<div class="actions">
+								<a class="btn ghost" target="_blank" rel="noreferrer" href="https://github.com/Shinjan18/Weather-Website">GitHub</a>
+								<a class="btn primary" target="_blank" rel="noreferrer" href="https://shinjan18.github.io/Weather-Website/">Live Demo</a>
+							</div>
+						</div>
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<section id="timeline" class="section">
+			<div class="container">
+				<h2 class="section-title">Experience & Education</h2>
+				<div class="timeline">
+					<div class="timeline-item reveal">
+						<div class="timeline-dot"></div>
+						<div class="timeline-card glow-small">
+							<h3>Vellore Institute of Technology, Bhopal (2019 – 2024)</h3>
+							<p>Integrated M.Tech. in CSE (AI & ML) – CGPA: 8.23</p>
+						</div>
+					</div>
+					<div class="timeline-item reveal">
+						<div class="timeline-dot"></div>
+						<div class="timeline-card glow-small">
+							<h3>Omdena – Student Collaborator (Feb 2023 – Apr 2023)</h3>
+							<p>Monitored water quality in Bhopal using satellite imagery and GIS techniques. Collected data for Motia Lake and built a dashboard for Manit Lake using Tableau.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="certifications" class="section">
+			<div class="container">
+				<h2 class="section-title">Certifications</h2>
+				<div class="grid certs-grid">
+					<div class="cert-card glow-small reveal">
+						<p>HTML, CSS, and JavaScript for Web Developers – Johns Hopkins University (Coursera, Oct 2020)</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="contact" class="section">
+			<div class="container">
+				<h2 class="section-title"><span id="contact-typing" class="typing" data-text="Contact Me..."></span></h2>
+				<div class="contact-wrapper">
+					<form id="contact-form" class="contact-form glow-small" autocomplete="on">
+						<div class="form-row">
+							<label for="name">Name</label>
+							<input id="name" name="name" type="text" required />
+						</div>
+						<div class="form-row">
+							<label for="email">Email</label>
+							<input id="email" name="email" type="email" required />
+						</div>
+						<div class="form-row">
+							<label for="message">Message</label>
+							<textarea id="message" name="message" rows="5" required></textarea>
+						</div>
+						<button type="submit" class="btn-primary full">Send</button>
+						<p class="form-note">This form opens your email client via mailto.</p>
+					</form>
+					<div class="contact-social">
+						<a class="social-link" href="mailto:shinjanverma@gmail.com">Email</a>
+						<a class="social-link" target="_blank" rel="noreferrer" href="https://github.com/Shinjan18">GitHub</a>
+						<a class="social-link" target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/shinjan-verma-062a6a1ba/">LinkedIn</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer class="footer">
+		<div class="container">
+			<p>© <span id="year"></span> Shinjan Verma • Built with HTML, CSS & JavaScript</p>
+		</div>
+	</footer>
+
+	<!-- Noscript notice -->
+	<noscript>
+		<style>
+			.reveal { opacity: 1; transform: none; }
+		</style>
+		<div style="padding:1rem;text-align:center;color:#fff;background:#120912;">
+			This website works best with JavaScript enabled.
+		</div>
+	</noscript>
+</body>
+</html>
+
